@@ -1,6 +1,7 @@
 ###############################
 import argparse
 import os
+import sys
 import csv
 import openbabel as ob
 import pybel
@@ -16,7 +17,7 @@ bonds, globularity, and PBF.
 
 
 def main():
-    args = parse_args()
+    args = parse_args(sys.argv[1:])
     if(args.smiles):
         mol = smiles_to_ob(args.smiles)
         properties = average_properties(mol)
@@ -38,7 +39,7 @@ def main():
         write_csv(mols_to_write, args.output)
 
 
-def parse_args():
+def parse_args(arguments):
     """Parse the command line options.
     :return:  All script options
     """
@@ -46,9 +47,10 @@ def parse_args():
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-s", "--smiles", dest="smiles", metavar="SMILES string", default=None)
     group.add_argument("-b", "--batch", dest="batch_file", metavar="Batch file", default=None)
-    parser.add_argument("-o", "--output", dest="output", metavar="Output file", default=None, help="Defaults to csv file with same name as input")
+    parser.add_argument("-o", "--output", dest="output", metavar="Output file", default=None,
+                        help="Defaults to csv file with same name as input")
 
-    args = parser.parse_args()
+    args = parser.parse_args(arguments)
     if not args.smiles and not args.batch_file:
         parser.error("Input structure is needed")
 
