@@ -16,9 +16,9 @@ locally.
 Dependencies
 ------------
 
-Entryway relies on OpenBabel and RDkit for handling chemical structures and conformer
-generation and NumPy for globularity calculations. These dependencies are most
-conveniently installed via [Conda](https://conda.io/docs/user-guide/install/index.html). The included `environment.yml` 
+Entryway relies on [OpenBabel](http://openbabel.org) and [RDKit](https://www.rdkit.org/) for handling chemical 
+structures and conformer generation and NumPy for globularity calculations. These dependencies are most conveniently 
+installed via [Conda](https://conda.io/docs/user-guide/install/index.html). The included `environment.yml` 
 file makes this straightforward:
 
 ```bash
@@ -69,5 +69,5 @@ Citing
 
 Please cite our paper on the eNTRy rules:
 
-[Richter, M. F.; Drown, B. S.; Riley, A. P.; Garcia, A.; Shirai, T.; Svec, R. L.; Hergenrother, P. J. *Nature* __2018__,
+[Richter, M. F.; Drown, B. S.; Riley, A. P.; Garcia, A.; Shirai, T.; Svec, R. L.; Hergenrother, P. J. *Nature* __2017__,
 *545*, 299-304.](https://doi.org/10.1038/nature22308)
