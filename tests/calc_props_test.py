@@ -1,7 +1,7 @@
 from nose.tools import assert_equals
 from nose.tools import assert_almost_equal
 import openbabel
-import calc_props
+from .context import calc_props
 
 
 def test_smiles_benzene():
