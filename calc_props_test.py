@@ -9,6 +9,15 @@ def test_smiles_benzene():
     assert(isinstance(mol, openbabel.OBMol))
     assert_equals(mol.NumAtoms(), 12)
 
+def test_rb():
+    pass
+
+def test_pbf():
+    pass
+
+def test_glob():
+    pass
+
 def test_confab():
     pass
 
