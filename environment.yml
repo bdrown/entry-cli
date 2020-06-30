@@ -2,10 +2,12 @@ name: entry-cli-env
 channels:
   - openbabel
   - rdkit
+  - conda-forge
   - defaults
 dependencies:
-- python=3
+- python
 - numpy
 - nose
-- openbabel
-- rdkit
+- flake8
+- openbabel=2.4.1
+- rdkit=2018.09.1.0

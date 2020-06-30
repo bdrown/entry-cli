@@ -29,9 +29,9 @@ jobs:
       - run: which python
       - name: Install dependencies
         run: |
-          conda install nose flake8 numpy -y
-          conda install -c rdkit rdkit=2018.09.1.0 -y
-          conda install -c openbabel openbabel=2.4.1 -y
+          conda env create -f environment.yml
+          conda activate entry-cli-env
+      - run: conda env list
       - name: Lint with flake8
         run: |
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
