@@ -29,9 +29,9 @@ jobs:
       - run: which python
       - name: Install dependencies
         run: |
+          conda install nose flake8 numpy -y
           conda install -c rdkit rdkit=2018.09.1.0 -y
           conda install -c openbabel openbabel=2.4.1 -y
-          conda install nose
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
