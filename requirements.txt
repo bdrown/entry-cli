@@ -1,6 +1,6 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
-flake8
+flake8=3.3.0
 nose
 numpy
 openbabel=2.4.1
