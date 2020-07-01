@@ -8,6 +8,6 @@ dependencies:
 - python
 - numpy
 - nose
-- flake8=3.3.0
+- flake8
 - openbabel=2.4.1
 - rdkit=2018.09.1.0
