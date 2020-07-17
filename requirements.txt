@@ -3,4 +3,4 @@
 nose
 numpy
 openbabel=3.1.1
-rdkit=2018.09.1.0
+rdkit=2020.03.3.0
