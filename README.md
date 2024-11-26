@@ -64,6 +64,47 @@ python calc_props.py -b tests/b-lactams.smi -o tests/b-lactam.csv
 python calc_props.py -b tests/b-lactams.smi
 ```
 
+Installing as a package
+-----------------------
+
+```sh
+# Download package and goto package directory
+git clone https://github.com/HergenrotherLab/entry-cli
+cd entry-cli
+
+# Make conda environment 'entry-cli-env'
+make init
+
+# Install package
+make install
+
+# To uninstall the package later, run 'make uninstall'
+```
+
+After installing the package, the application is available from the command line:
+
+```sh
+usage: entry-cli [-h] [-s SMILES string | -b Batch file] [-o Output file]
+
+Performs calculation of physiochemical properties of potential antibiotics.
+SMILES strings are parsed, conformers are generated, and properties
+calculated. Properties include: chemical formula, molecular weight, rotatable
+bonds, globularity, and PBF.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SMILES string, --smiles SMILES string
+  -b Batch file, --batch Batch file
+  -o Output file, --output Output file
+                        Defaults to csv file with same name as input
+```
+
+Alternatively, the functions can be imported as a python module.
+
+```python 
+from entry_cli.calc_props import smiles_to_ob, average_properties
+```
+
 Citing
 ------
 
