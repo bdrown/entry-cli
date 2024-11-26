@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "entry-cli"
+description = "Command line app for predicting bacterial accumulation."
+dynamic = ["version"]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+authors = [
+    {name = "Bryon Drown"},
+    {name = "swansonk14", email = "swansonk.14@gmail.com"},
+    {name = "Andrew Wilkinson"}
+]
+requires-python = ">= 3"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+keywords = []
+
+[project.urls]
+Repository = "https://github.com/HergenrotherLab/entry-cli"
+
+[project.scripts]
+entry-cli = "entry_cli.calc_props:main"
+
+[tool.setuptools]
+packages = ["entry_cli"]
+
+[tool.setuptools.dynamic]
+version = {attr = "entry_cli.__version__"}
